@@ -224,8 +224,8 @@ default_border pixel 3
 default_floating_border normal 0
 hide_edge_borders smart
 
-exec --no-startup-id xinput set-prop "pointer:Razer Razer DeathAdder Elite" "libinput Natural Scrolling Enabled" 0
-exec --no-startup-id xinput set-prop "pointer:Logitech G203 LIGHTSYNC Gaming Mouse" "libinput Natural Scrolling Enabled" 0
+exec --no-startup-id xinput set-prop "pointer:Razer Razer DeathAdder Elite" "libinput Natural Scrolling Enabled" 1
+exec --no-startup-id xinput set-prop "pointer:Logitech G203 LIGHTSYNC Gaming Mouse" "libinput Natural Scrolling Enabled" 1
 
 # Assign workspaces to each monitor
 workspace 1 output HDMI-A-0
