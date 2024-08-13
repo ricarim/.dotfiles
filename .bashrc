@@ -122,10 +122,11 @@ if ! shopt -oq posix; then
   fi
 fi
 . "$HOME/.cargo/env"
-export PATH="$HOME/.local/bin:$PATH"
-export PATH="$HOME/.local/bin:$PATH"
 
-export PATH="$HOME/.local/bin:$PATH"
+# NVIDIA CUDA TOOLKIT
+export PATH=/usr/local/cuda-12.1/bin${PATH:+:${PATH}}:/home/ricardo/.local/share/coursier/bin/
+export LD_LIBRARY_PATH=/usr/local/cuda-12.1/lib64${LD_LIBRARY_PATH:+:${LD_LIBRARY_PATH}}
+
 
 [ -f ~/.fzf.bash ] && source ~/.fzf.bash
 
