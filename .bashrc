@@ -121,7 +121,6 @@ if ! shopt -oq posix; then
     . /etc/bash_completion
   fi
 fi
-. "$HOME/.cargo/env"
 
 # NVIDIA CUDA TOOLKIT
 export PATH=/usr/local/cuda-12.1/bin${PATH:+:${PATH}}:/home/ricardo/.local/share/coursier/bin/
@@ -141,3 +140,4 @@ wht='\[\033[01;37m\]'   # White
 clr='\[\033[00m\]'      # Reset
 
 alias vim='nvim'
+. "$HOME/.cargo/env"

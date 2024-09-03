@@ -186,15 +186,16 @@ bindsym $mod+r mode "resize"
 bar {
     status_command ~/.config/i3/bumblebee-status/bumblebee-status \
  -t solarized-powerline\
- -m  disk memory datetime battery brightness pulseout hostname
+ -m  disk memory datetime battery brightness pulseout hostname \
+ -p datetime.format="%a, %d/%m/%y %H:%M:%S"
 
 
 }
 
 exec --no-startup-id picom --experimental-backends -b
 
-bindsym XF86Switch_VT_7 exec sh ~/.config/i3/backlight.sh -inc 20
-bindsym XF86Switch_VT_8 exec sh ~/.config/i3/backlight.sh -dec 20
+bindsym XF86MonBrightnessUp exec sh ~/.config/i3/backlight.sh -inc 20 
+bindsym XF86MonBrightnessDown exec sh ~/.config/i3/backlight.sh -dec 20
 
 
 exec --no-startup-id brightnessctl s 75%
@@ -227,8 +228,8 @@ default_border pixel 3
 default_floating_border normal 0
 hide_edge_borders smart
 
-exec --no-startup-id xinput set-prop "pointer:Razer Razer DeathAdder Elite" "libinput Natural Scrolling Enabled" 1
-exec --no-startup-id xinput set-prop "pointer:Logitech G203 LIGHTSYNC Gaming Mouse" "libinput Natural Scrolling Enabled" 1
+exec --no-startup-id xinput set-prop "pointer:Razer Razer DeathAdder Elite" "libinput Natural Scrolling Enabled" 0
+exec --no-startup-id xinput set-prop "pointer:Logitech G203 LIGHTSYNC Gaming Mouse" "libinput Natural Scrolling Enabled" 0
 
 # Assign workspaces to each monitor
 workspace 1 output HDMI-A-0
@@ -243,6 +244,4 @@ workspace 9 output eDP
 workspace 0 output eDP
 
 exec feh --randomize --bg-fill ~/Pictures/*
-
-
 
